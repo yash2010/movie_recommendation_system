@@ -9,7 +9,7 @@ A movie recommendation system that finds films based on natural language descrip
 - **Semantic search** - finds movies by meaning, not just keywords
 - **Query expansion** - automatically enriches vague queries using a local LLM (Ollama)
 - **Custom transformer** - seq2seq query expander built from scratch in PyTorch
-- **34,608 movies** indexed from Wikipedia
+- **Movies** indexed from Wikipedia
 - **REST API** - FastAPI with interactive Swagger docs
 - **Two expander modes** - Ollama (high quality) or local trained model (offline)
 - **Similar movies** - find movies similar to any movie by ID
@@ -27,7 +27,7 @@ Query Expansion (Ollama / Custom Transformer)
                         featuring an unreliable narrator..."
         │
 Sentence Transformer Embedding (all-MiniLM-L6-v2)
-  Text -> 384-dimensional vector
+  Text -> dimensional vector
         │
 Cosine Similarity Search
   Query vector · Movie vectors (34,608 × 384 matrix)
