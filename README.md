@@ -46,6 +46,7 @@ Top-k Results via REST API
 ```
 movie-recommendation/
 ├── data/
+|   ├── movies_with_plots.csv     # Unprocessed dataset
 │   ├── movies_clean.csv          # Cleaned movie dataset
 │   ├── vague_queries.json        # Queries for training data generation
 │   └── training_pairs.json       # Generated (query, expansion) pairs
