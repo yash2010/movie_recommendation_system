@@ -1,19 +1,19 @@
 # 🎬 Semantic Movie Recommendation System
 
-A production-ready movie recommendation system that finds films based on natural language descriptions rather than keyword matching. Built from scratch using transformer embeddings, semantic similarity search, and an optional LLM query expansion layer — all served through a REST API.
+A production-ready movie recommendation system that finds films based on natural language descriptions rather than keyword matching. Built from scratch using transformer embeddings, semantic similarity search, and an optional LLM query expansion layer, all served through a REST API.
 
 ---
 
 ## ✨ Features
 
-- **Semantic search** — finds movies by meaning, not just keywords
-- **Query expansion** — automatically enriches vague queries using a local LLM (Ollama)
-- **Custom transformer** — seq2seq query expander built from scratch in PyTorch
+- **Semantic search** - finds movies by meaning, not just keywords
+- **Query expansion** - automatically enriches vague queries using a local LLM (Ollama)
+- **Custom transformer** - seq2seq query expander built from scratch in PyTorch
 - **34,608 movies** indexed from Wikipedia
-- **REST API** — FastAPI with interactive Swagger docs
-- **Two expander modes** — Ollama (high quality) or local trained model (offline)
-- **Similar movies** — find movies similar to any movie by ID
-- **Genre filtering** — filter results by genre
+- **REST API** - FastAPI with interactive Swagger docs
+- **Two expander modes** - Ollama (high quality) or local trained model (offline)
+- **Similar movies** - find movies similar to any movie by ID
+- **Genre filtering** - filter results by genre
 
 ---
 
@@ -96,7 +96,7 @@ pip install -r requirements.txt
 ### 2. Get the dataset
 
 This project uses the **Wikipedia Movie Plots** dataset by Justin Robischon.
-- **Source:** [Kaggle — Wikipedia Movie Plots](https://www.kaggle.com/datasets/jrobischon/wikipedia-movie-plots)
+- **Source:** [Kaggle - Wikipedia Movie Plots](https://www.kaggle.com/datasets/jrobischon/wikipedia-movie-plots)
 - **Size:** ~35,000 movies with full Wikipedia plot descriptions
 - **Columns:** Release Year, Title, Origin/Ethnicity, Director, Cast, Genre, Wiki Page, Plot, PlotSummary
 
@@ -231,7 +231,7 @@ python train.py
 
 ## 🧠 Custom Transformer
 
-The query expander is a seq2seq transformer built entirely from scratch in PyTorch — no pretrained weights, no Hugging Face models.
+The query expander is a seq2seq transformer built entirely from scratch in PyTorch - no pretrained weights, no Hugging Face models.
 
 | Hyperparameter | Value |
 |---|---|
@@ -277,7 +277,7 @@ The system encodes both movies and queries as 384-dimensional vectors using `all
 
 ## 📄 License
 
-MIT License — see [LICENSE](LICENSE) for details.
+MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
