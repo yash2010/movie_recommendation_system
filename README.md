@@ -47,13 +47,13 @@ movie-recommendation/
 │   ├── vague_queries.json        # Queries for training data generation
 │   └── training_pairs.json       # Generated (query, expansion) pairs
 ├── artifacts/
-│   ├── embeddings.npy            # (34608, 384) embedding matrix
+│   ├── embeddings.npy            # embedding matrix
 │   ├── movies.parquet            # Cleaned movie metadata
 │   ├── model_name.txt            # Embedding model identifier
 │   └── expander/                 # Trained query expander weights
 ├── model/
 │   ├── config.py                 # All hyperparameters
-│   ├── tokenizer.py              # Text ↔ token ID conversion
+│   ├── tokenizer.py              # Text to token ID conversion
 │   ├── dataset.py                # PyTorch Dataset and DataLoader
 │   ├── attention.py              # Multi-head attention from scratch
 │   ├── blocks.py                 # Encoder and decoder blocks
