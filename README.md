@@ -275,18 +275,6 @@ The system encodes both movies and queries as 384-dimensional vectors using `all
 
 ---
 
-## 🗺️ Roadmap
-
-- [ ] Generate 500+ training pairs and retrain query expander
-- [ ] Add user feedback endpoint for interaction logging
-- [ ] Integrate collaborative filtering (matrix factorization)
-- [ ] Add sequential recommendation model (SASRec)
-- [ ] FAISS index for larger corpora (100k+ movies)
-- [ ] Docker deployment
-- [ ] Add LLM re-ranking layer
-
----
-
 ## 📄 License
 
 MIT License — see [LICENSE](LICENSE) for details.
@@ -298,4 +286,4 @@ MIT License — see [LICENSE](LICENSE) for details.
 - [sentence-transformers](https://www.sbert.net/) for the embedding model
 - [FastAPI](https://fastapi.tiangolo.com/) for the web framework
 - [Ollama](https://ollama.com/) for local LLM inference
-- Wikipedia Movie Plots dataset
+- [Kaggle](https://www.kaggle.com/) for movie dataset
