@@ -99,11 +99,7 @@ This project uses the **Wikipedia Movie Plots** dataset by Justin Robischon.
 - **Size:** ~35,000 movies with full Wikipedia plot descriptions
 - **Columns:** Release Year, Title, Origin/Ethnicity, Director, Cast, Genre, Wiki Page, Plot, PlotSummary
 
-Place the downloaded file in `data/`
-
-```
-data/movies_clean.csv
-```
+Download the Wikipedia Movie Plots dataset and place it in `data/`:
 
 The CSV should have these columns:
 `release_year, title, origin_ethnicity, director, cast, genre, wiki_page, plot, plotsummary`
@@ -113,7 +109,10 @@ The CSV should have these columns:
 ```bash
 python clean_data.py
 ```
-
+The cleaned dataset will be stored under the path:
+```
+data/movies_clean.csv
+```
 ### 4. Build the embedding index
 
 This embeds all 34,608 movies using sentence-transformers. Takes ~8 minutes, runs once.
