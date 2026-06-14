@@ -82,12 +82,14 @@ movie-recommendation/
 ```bash
 git clone https://github.com/yash2010/movie_recommendation_system.git
 cd movie_recommendation_system
-
-conda create -n movie_re python=3.11
-conda activate movie_re
-
-pip install -r requirements.txt
 ```
+
+Install dependencies using 
+
+```bash
+conda env create -f environment.yml
+```
+
 
 ### 2. Get the dataset
 
