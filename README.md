@@ -83,7 +83,7 @@ movie-recommendation/
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/your-username/movie-recommendation.git
+git clone https://github.com/yash2010/movie_recommendation_system.git
 cd movie-recommendation
 
 conda create -n movie_re python=3.11
