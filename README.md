@@ -84,7 +84,7 @@ movie-recommendation/
 
 ```bash
 git clone https://github.com/yash2010/movie_recommendation_system.git
-cd movie-recommendation
+cd movie_recommendation_system
 
 conda create -n movie_re python=3.11
 conda activate movie_re
@@ -94,7 +94,12 @@ pip install -r requirements.txt
 
 ### 2. Get the dataset
 
-Download the Wikipedia Movie Plots dataset and place it in `data/`:
+This project uses the **Wikipedia Movie Plots** dataset by Justin Robischon.
+- **Source:** [Kaggle — Wikipedia Movie Plots](https://www.kaggle.com/datasets/jrobischon/wikipedia-movie-plots)
+- **Size:** ~35,000 movies with full Wikipedia plot descriptions
+- **Columns:** Release Year, Title, Origin/Ethnicity, Director, Cast, Genre, Wiki Page, Plot, PlotSummary
+
+Place the downloaded file in `data/`
 
 ```
 data/movies_clean.csv
