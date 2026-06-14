@@ -241,7 +241,7 @@ Traditional keyword search matches exact words. Semantic search matches meaning:
 | "film that makes you think" | No matches (too vague) | Philosophical dramas, thought-provoking sci-fi |
 | "something like Inception" | No matches | Mind-bending sci-fi, non-linear narratives |
 
-The system encodes both movies and queries as 384-dimensional vectors using `all-MiniLM-L6-v2`. Cosine similarity between vectors measures semantic relatedness. Higher score = more similar meaning.
+The system encodes both movies and queries as a dimensional vectors using `all-MiniLM-L6-v2`. Cosine similarity between vectors measures semantic relatedness. Higher score = more similar meaning.
 
 ---
 
