@@ -1,6 +1,6 @@
 # 🎬 Semantic Movie Recommendation System
 
-A production-ready movie recommendation system that finds films based on natural language descriptions rather than keyword matching. Built from scratch using transformer embeddings, semantic similarity search, and an optional LLM query expansion layer, all served through a REST API.
+A movie recommendation system that finds films based on natural language descriptions rather than keyword matching. Built from scratch using transformer embeddings, semantic similarity search, and an optional LLM query expansion layer, all served through a REST API.
 
 ---
 
@@ -112,7 +112,7 @@ data/movies_clean.csv
 ```
 ### 4. Build the embedding index
 
-This embeds all 34,608 movies using sentence-transformers. Takes ~8 minutes, runs once.
+This embeds all the movies using sentence-transformers.
 
 ```bash
 python build_index.py
@@ -136,7 +136,7 @@ Visit `http://localhost:8000/docs` for interactive API documentation.
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### `POST /recommend`
 
@@ -229,20 +229,6 @@ python train.py
 
 The query expander is a seq2seq transformer built entirely from scratch in PyTorch - no pretrained weights, no Hugging Face models.
 
-| Hyperparameter | Value |
-|---|---|
-| Architecture | Encoder-Decoder Transformer |
-| Vocabulary size | 8,000 tokens |
-| Embedding dimension | 256 |
-| Attention heads | 8 |
-| Encoder/Decoder layers | 4 each |
-| Feedforward dimension | 512 |
-| Total parameters | 11,404,288 |
-| Optimizer | AdamW |
-| Loss function | CrossEntropyLoss + label smoothing |
-
----
-
 ## 📊 How Semantic Search Works
 
 Traditional keyword search matches exact words. Semantic search matches meaning:
@@ -257,27 +243,13 @@ The system encodes both movies and queries as 384-dimensional vectors using `all
 
 ---
 
-## 🛠️ Tech Stack
-
-| Component | Technology |
-|---|---|
-| Embedding model | sentence-transformers/all-MiniLM-L6-v2 |
-| Custom transformer | PyTorch (built from scratch) |
-| LLM query expansion | Ollama (llama3) |
-| Similarity search | NumPy (cosine similarity) |
-| Data processing | Pandas, PyArrow |
-| REST API | FastAPI + Uvicorn |
-| Data validation | Pydantic |
-
----
-
 ## 📄 License
 
 MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 - [sentence-transformers](https://www.sbert.net/) for the embedding model
 - [FastAPI](https://fastapi.tiangolo.com/) for the web framework
