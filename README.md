@@ -22,20 +22,16 @@ A production-ready movie recommendation system that finds films based on natural
 ```
 User types a description
         │
-        ▼
 Query Expansion (Ollama / Custom Transformer)
-  "a dark thriller" → "A psychologically intense thriller
+  "a dark thriller" -> "A psychologically intense thriller
                         featuring an unreliable narrator..."
         │
-        ▼
 Sentence Transformer Embedding (all-MiniLM-L6-v2)
-  Text → 384-dimensional vector
+  Text -> 384-dimensional vector
         │
-        ▼
 Cosine Similarity Search
   Query vector · Movie vectors (34,608 × 384 matrix)
         │
-        ▼
 Top-k Results via REST API
 ```
 
