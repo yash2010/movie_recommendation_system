@@ -100,10 +100,7 @@ def recommend(req: RecommendRequest):
         if expanded != req.query:
             expanded_query = expanded
             search_query = expanded
-    
-    print(f"DEBUG: searching for: {search_query[:50]}")
-    
-    
+            
     # search
     results =recommender.search(query=search_query, top_k=req.top_k, genre_filter=req.genre_filter)
     
