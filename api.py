@@ -174,32 +174,3 @@ def search_movies(
             for _, row in matches.iterrows()
         ]
     }
-
-@app.get("/debug")
-def debug():
-    import numpy as np
-    scores_sample = (recommender.embeddings @ recommender.embeddings[0]).tolist()[:5]
-    return {
-        "embeddings_shape": list(recommender.embeddings.shape),
-        "movies_columns": recommender.movies.columns.tolist(),
-        "has_movie_id": "movie_id" in recommender.movies.columns,
-        "movies_count": len(recommender.movies),
-        "sample_scores": scores_sample,
-        "first_movie": recommender.movies.iloc[0]["title"],
-    }
-
-@app.get("/debug2")
-def debug2():
-    import numpy as np
-    query = "action love movie"
-    query_embed = recommender.model.encode(
-        [query], normalize_embeddings=True, convert_to_numpy=True
-    )[0]
-    scores = recommender.embeddings @ query_embed
-    top_idx = np.argpartition(scores, -5)[-5:]
-    top_idx = top_idx[np.argsort(-scores[top_idx])]
-    return {
-        "top_scores": scores[top_idx].tolist(),
-        "top_titles": recommender.movies.iloc[top_idx]["title"].tolist(),
-        "top_idx": top_idx.tolist(),
-    }
