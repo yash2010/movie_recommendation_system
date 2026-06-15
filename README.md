@@ -260,6 +260,6 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## Note
 
-⚠️** Work in Progress**
+⚠️**Work in Progress**
 
 This recommendation system is till under development and is currently under development and is not yet fully complete. At the moment, only the semantic search functionality has been implemented. Additional features, enhancements, and optimizations are planned and will be introduced in future updates.
