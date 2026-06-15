@@ -257,3 +257,9 @@ MIT License - see [LICENSE](LICENSE) for details.
 - [FastAPI](https://fastapi.tiangolo.com/) for the web framework
 - [Ollama](https://ollama.com/) for local LLM inference
 - [Kaggle](https://www.kaggle.com/) for movie dataset
+
+## Note
+
+⚠️** Work in Progress**
+
+This recommendation system is till under development and is currently under development and is not yet fully complete. At the moment, only the semantic search functionality has been implemented. Additional features, enhancements, and optimizations are planned and will be introduced in future updates.
