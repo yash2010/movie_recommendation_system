@@ -106,9 +106,7 @@ def recommend(req: RecommendRequest):
     
     # search
     results =recommender.search(query=search_query, top_k=req.top_k, genre_filter=req.genre_filter)
-    print(f"DEBUG: got {len(results)} results, first score: {results[0].score if results else 'NO RESULTS'}")
-    print(f"DEBUG: first title: {results[0].title if results else 'NO RESULTS'}")
-
+    
     took_ms = (time.time() - start) * 1000
     return RecommendResponse(query=req.query, expanded_query=expanded_query,
                              results=[MovieResult(
