@@ -30,7 +30,7 @@ Sentence Transformer Embedding (all-MiniLM-L6-v2)
   Text -> dimensional vector
         │
 Cosine Similarity Search
-  Query vector · Movie vectors (34,608 × 384 matrix)
+  Query vector · Movie vectors 
         │
 Top-k Results via REST API
 ```
